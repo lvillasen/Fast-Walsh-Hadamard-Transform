@@ -26,10 +26,14 @@ def Hn(n_qbits,A):
 	for qbit in range(n_qbits):
 		B = np.zeros(2**n_qbits,dtype=np.complex_)
 		for j in range(2**n_qbits):
-			bit_parity=(j>>qbit)%2
-			B[j] += isq2*A[j]*(1-2*bit_parity)				
-			B[set_bit(j,qbit)] += isq2*A[j]*(1-bit_parity)
-			B[clear_bit(j,qbit)] += isq2*A[j] * bit_parity
+			if A[j] != 0:
+				bit_parity=(j>>qbit)%2
+				if bit_parity == 0:
+					B[j]+=isq2*A[j]
+					B[set_bit(j,qbit)]+=isq2*A[j]
+				elif bit_parity == 1:
+					B[clear_bit(j,qbit)]+=isq2*A[j]
+					B[j]+=-isq2*A[j]
 		A = B
 	return B
 
