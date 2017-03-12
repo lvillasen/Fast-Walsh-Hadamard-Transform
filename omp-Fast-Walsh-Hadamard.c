@@ -53,10 +53,10 @@ int main (int argc,char *argv[]) {
     }
   }
   for (int i = 0 ; i < 10; i++) {
-    printf("i= %d B[i] %.5f:\n",i,B[i]);
+    printf("B[%d] = %.5f:\n",i,B[i]);
   }
   for (int i = N -10 ; i < N; i++) {
-    printf("i= %d  B[i] %.5f:\n",i,B[i]);
+    printf("B[%d] = %.5f:\n",i,B[i]);
   }
   return 0;
 }
