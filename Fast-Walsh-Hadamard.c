@@ -1,6 +1,15 @@
+// Fast Walsh-Hadamard Transform
+// Luis Villasenor
+// lvillasen@gmail.com
+// 3/11/2017 
+
+#include <stdlib.h>
 #include <iostream>
 #include <stdio.h>
 #include <math.h>
+#include <iostream>
+#include <cstring>
+#include <cstdlib>
 
 int main (int argc,char *argv[]) {
    int n_qbits;
