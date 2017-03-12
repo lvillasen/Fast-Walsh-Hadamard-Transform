@@ -4,11 +4,17 @@
 # Luis Villasenor
 # lvillasen@gmail.com
 # 2/27/2017 
-
+from __future__ import print_function
 import numpy as np
 import numba
+import sys
 
-n_qbits = 16
+if len(sys.argv) == 2:
+	n_qbits=int(sys.argv[1])
+
+print('Number of qubits:',n_qbits)
+print('Number of states:',2**n_qbits)
+
 A = np.zeros(2**n_qbits,dtype=np.complex_) # Set initial value of array A
 A[0] =1
 
@@ -39,4 +45,3 @@ def Hn(n_qbits,A):
 
 C = Hn(n_qbits,A)
 print(C) # Transformed array
-
