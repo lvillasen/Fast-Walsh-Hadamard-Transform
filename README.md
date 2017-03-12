@@ -5,14 +5,20 @@ One version is written in Python and accelerated with Numba
 
 Usage:
 
-  python Fast-Walsh-Hadamard-Transform.py m
+    python Fast-Walsh-Hadamard-Transform.py m
   
-the other version is written in C
+other version is written in C
 
 Usage:
 
-  c++ Fast-Walsh-Hadamard.c -o Fast-Walsh-Hadamard
+    c++ Fast-Walsh-Hadamard.c -o Fast-Walsh-Hadamard
   
-  ./Fast-Walsh-Hadamard m
+    ./Fast-Walsh-Hadamard m
   
-For large m (around 25) the C code is about twice faster than the Python code.
+the third version is written in C parallelized with openMP
+
+Usage:
+
+    c++ omp-Fast-Walsh-Hadamard.c -o omp-Fast-Walsh-Hadamard -fopenmp
+  
+    ./omp-Fast-Walsh-Hadamard m
