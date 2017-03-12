@@ -1,3 +1,7 @@
+// Fast Walsh-Hadamard Transform with openMP
+// Luis Villasenor
+// lvillasen@gmail.com
+// 3/11/2017 
 #include <stdlib.h>
 #include <iostream>
 #include <stdio.h>
