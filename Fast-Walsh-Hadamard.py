@@ -6,7 +6,7 @@
 # 2/27/2017 
 from __future__ import print_function
 import numpy as np
-import numba
+#import numba
 import sys
 
 if len(sys.argv) == 2:
@@ -18,15 +18,15 @@ print('Number of states:',2**n_qbits)
 A = np.zeros(2**n_qbits,dtype=np.complex_) # Set initial value of array A
 A[0] =1
 
-@numba.autojit
+#@numba.autojit
 def set_bit(value, bit):
     return value | (1<<bit)
 
-@numba.autojit
+#@numba.autojit
 def clear_bit(value, bit):
     return value & ~(1<<bit)
 
-@numba.autojit
+#@numba.autojit
 def Hn(n_qbits,A):
 	isq2 = 1/np.sqrt(2)
 	for qbit in range(n_qbits):
