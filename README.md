@@ -1,7 +1,7 @@
 # Fast-Walsh-Hadamard-Transform
 The Walsh-Hadamard transform is a 2^m x 2^m matrix that transforms 2^m real or complex numbers into 2^m real or complex numbers.
 
-One version is written in Python and accelerated with Numba
+One version is written in Python and accelerated with Numba (Numba was commented out on 4/22/23)
 
 Usage:
 
